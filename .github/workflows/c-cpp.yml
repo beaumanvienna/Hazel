@@ -27,8 +27,7 @@ jobs:
     - name: premake
       run: premake5 gmake2
     
-    - name: compile-debug
-      run: export MAKEFLAGS=-j8 && make verbose=1 config=debug
+
     - name: compile-release
       run: export MAKEFLAGS=-j8 && make verbose=1 config=release
     
