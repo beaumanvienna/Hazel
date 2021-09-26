@@ -19,8 +19,11 @@ jobs:
       run: sudo add-apt-repository ppa:beauman/marley && sudo apt-get update
 
     - name: getdeps
-      run: sudo apt install build-essential libx11-dev premake5
-            
+      run: sudo apt install git build-essential libx11-dev premake5
+
+    - name: submodules
+      run: git submodule update --init --recursive
+
     - name: premake
       run: premake5 gmake2
     
