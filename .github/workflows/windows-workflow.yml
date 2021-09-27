@@ -1,0 +1,29 @@
+name: 🤔 Windows
+
+on:
+  push:
+    branches: [ master, dev, physics ]
+  pull_request:
+    branches: [ master, dev, physics ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+
+    - name: submodules
+      run: git submodule update --init --recursive -j $(getconf _NPROCESSORS_ONLN)
+
+    - name: premake
+      run: premake5 gmake2
+    
+    - name: compile-release
+    - run: premake5 --version
+    
+      
+      
+      
