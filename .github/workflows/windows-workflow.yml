@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-
     - name: submodules
       run: git submodule update --init --recursive -j $(getconf _NPROCESSORS_ONLN)
 
