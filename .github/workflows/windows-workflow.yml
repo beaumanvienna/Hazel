@@ -16,6 +16,9 @@ jobs:
     - name: submodules
       run: git submodule update --init --recursive -j $(getconf _NPROCESSORS_ONLN)
 
+    - name: Setup premake
+      uses: abel0b/setup-premake@v1
+
     - name: premake
       run: premake5 gmake2
     
