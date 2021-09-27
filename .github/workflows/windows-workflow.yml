@@ -2,9 +2,9 @@ name: Windows
 
 on:
   push:
-    branches: [ master, dev, physics ]
+    branches: [ master, dev, physics, github-actions ]
   pull_request:
-    branches: [ master, dev, physics ]
+    branches: [ master, dev, physics, github-actions ]
 
 jobs:
   build:
@@ -21,6 +21,8 @@ jobs:
     
     - name: compile-release
       run: premake5 --version
+
+
     
       
       
